@@ -1,13 +1,17 @@
 package com.example.sem3HomeTask.services;
 
 import com.example.sem3HomeTask.domain.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/*
+Класс для работы с пользователями.
+ */
 @Service
 public class UserService {
 
-   // @Autowired
+    /*
+    Объект сервиса уведомлений.
+     */
     private NotificationService notificationService;
 
     // Внедрение зависимости через конструктор
@@ -15,6 +19,13 @@ public class UserService {
         this.notificationService = notificationService;
     }
 
+    /*
+    Метод создания нового пользователя.
+    @param имя.
+    @param возраст.
+    @param электронная почта.
+    @return объект пользователя.
+     */
     public User createUser(String name, int age, String email) {
         User user = new User();
         user.setName(name);
