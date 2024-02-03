@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>For Authenticated Users</title>
+</head>
+    <body>
+        <header>
+            <div class="head-cont container">
+                <h1>For Authenticated Users</h1>
+            </div>
+        </header>
+        <div class="container">
+            <form class="public-form" th:method="GET" th:action="@{/private-data}">
+                <button class="btn-admin" type="submit">Только для администраторов</button>
+            </form>
+            <form th:method="POST" th:action="@{/logout}">
+                <button class="btn" type="submit">Log Out</button>
+            </form>
+        </div>
+    </body>
+</html>

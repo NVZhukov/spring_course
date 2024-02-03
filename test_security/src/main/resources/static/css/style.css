@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Lato";
+  background-color: #CDE6FB;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.head-cont {
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.name-form {
+  padding-bottom: 20px
+}
+
+.pass-form {
+  padding-bottom: 20px
+}
+
+.name-form label {
+  font-size: large;
+}
+
+.name-form input {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+}
+
+.pass-form label {
+  font-size: large;
+}
+
+.pass-form input {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+}
+
+.btn {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  border-radius: 4px;
+  width:120px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 4px 6px;
+}
+
+.btn:hover, a.bot8:focus {
+   border-color: rgba(82, 168, 236, 0.8);
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+   outline: 0 none;
+}
+
+.public-form {
+  padding-bottom: 15px;
+}
+
+.btn-admin {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 4px 6px;
+}
+
+.btn-admin:hover, a.bot8:focus {
+   border-color: rgba(82, 168, 236, 0.8);
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+   outline: 0 none;
+}

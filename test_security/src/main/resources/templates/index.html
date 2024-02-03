@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Login</title>
+</head>
+    <body>
+        <header>
+            <div class="head-cont container">
+                <h2>Login</h2>
+            </div>
+        </header>
+        <div class="container">
+            <form method="post" action="/process_login">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                <div class="name-form">
+                    <label  for="username">Username:</label>
+                    <input  type="text" class="form-control" aria-label="username" name="username"
+                           id="username"/>
+                </div>
+                <div class="pass-form">
+                    <label for="password">Password:    </label>
+                    <input type="password" class="form-control" aria-label="password"
+                           name="password" id="password"/>
+                </div>
+                <input class="btn" type="submit" value="Login"/>
+            </form>
+        </div>
+    </body>
+</html>
