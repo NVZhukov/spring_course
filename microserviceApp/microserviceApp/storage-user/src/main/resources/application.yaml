@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: storage
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+          route-id-prefix: storage-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

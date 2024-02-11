@@ -1,0 +1,1 @@
+INSERT INTO user_table (firstName,email,age) VALUES ('Jane Down','email@mail.ru','32');

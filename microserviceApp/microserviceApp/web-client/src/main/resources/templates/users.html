@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <header>
+        <div class="head-cont container">
+            <h1>Users</h1>
+        </div>
+    </header>
+    <main>
+        <section class="main-content container">
+            <div class="table">
+                <h2 class="total">Total Users: <span th:text="${totalNumber}"></span></h2>
+                <h2 class="view">View users</h2>
+                <table>
+                    <tr>
+                        <th class="first-name">User Firstname</th>
+                        <th class="last-name">User Lastname</th>
+                    </tr>
+                    <tr th:each="u: ${users}" >
+                        <td th:text="${u.firstName}"></td>
+                        <td th:text="${u.lastName}"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="add-form">
+                <h2>Add user</h2>
+                <form action="/users" method="post">
+                    FirstName: <input class="input-fn" type="text" name="firstName"><br />
+                    LastName:  <input class="input-ln" type="text" name="lastName"><br />
+                    <button type="submit">Add user</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
