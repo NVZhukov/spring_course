@@ -1,1 +1,1 @@
-INSERT INTO tasks (description,status) VALUES ('Jane Down','0');
+INSERT INTO tasks (description,status,created) VALUES ('Jane Down','0',CURRENT_TIMESTAMP);
