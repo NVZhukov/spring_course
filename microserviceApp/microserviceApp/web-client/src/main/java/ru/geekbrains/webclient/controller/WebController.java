@@ -3,14 +3,14 @@ package ru.geekbrains.webclient.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import ru.geekbrains.webclient.model.User;
 import ru.geekbrains.webclient.service.UserService;
 
+import java.util.List;
+
 @Controller
+//@RequestMapping("/users")
 public class UserController {
 
     @Autowired
@@ -22,19 +22,20 @@ public class UserController {
 
     @GetMapping("/users")
     public String getAll(Model model) {
-        model.addAttribute("users", service.getAll());
-        return "home";
+        List<User> users = service.getUserList();
+        model.addAttribute("users", users);
+        return "users";
     }
-//
-//    @PostMapping("/users")
+
+//    @PostMapping
 //    public String createUser(Model model, User user) {
-//        service.createUser(user);
-//        model.addAttribute("users", service.getAll());
+//        service.save(user.getId(), user.getName(), user.getLastName(), user.getEmail());
+//        model.addAttribute("users", service.getUserList());
 //        return "users";
 //    }
-//
-//    @DeleteMapping("/users/{id}")
-//    public void deleteUser(@PathVariable Long id) {
-//        service.deleteUser(id);
-//    }
+
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id) {
+        service.getNote(id);
+    }
 }
